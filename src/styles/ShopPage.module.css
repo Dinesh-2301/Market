@@ -1,0 +1,198 @@
+.shopContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* 🛒 Cart Icon */
+.cartIconTopRight {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background-color: #2e7d32;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: bounce 1.5s infinite;
+  transition: transform 0.3s ease;
+}
+
+.cartIconTopRight:hover {
+  transform: scale(1.1);
+}
+
+/* 🪄 Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* 🛍️ Product Card */
+.productCard {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.productCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ✨ Fade Up on Load */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.productImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.03);
+}
+
+/* 📦 Product Info */
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.productCategory {
+  font-size: 0.8rem;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.productName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+.productPricing {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.discountPrice {
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* 🛒 Add to Cart Button */
+.addToCartBtn {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 0.8rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addToCartBtn:hover {
+  background-color: #256728;
+  transform: scale(1.05);
+}
+/* src/styles/ShopPage.module.css */
+
+.container {
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.filter {
+  margin-bottom: 1.5rem;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.cartButton {
+  position: relative;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cartButton:hover {
+  background-color: #1b5e20;
+}
+
+.cartCount {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+}

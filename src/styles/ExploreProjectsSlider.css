@@ -1,0 +1,65 @@
+.explore-section {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+}
+
+.explore-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #111;
+  margin-bottom: 2rem;
+}
+
+.project-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 10px;
+}
+
+.project-card {
+  flex: 0 0 auto;
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.project-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:active .project-img {
+  transform: scale(1.1);
+}
+
+.project-info {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.project-label {
+  color: #facc15; /* yellow */
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.project-title {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 4px;
+  font-family: 'Segoe UI', sans-serif;
+}
